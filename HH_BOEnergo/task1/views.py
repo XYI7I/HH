@@ -5,10 +5,11 @@ import math
 
 # Create your views here.s
 def index(request):
-
-    a = 1
-    b = 0
-    c = 0
+    context = {}
+    if request.method == 'POST':
+        a = request.POST.get('a')
+        b = request.POST.get('b')
+        c = request.POST.get('c')
 
     discr = b ** 2 - 4 * a * c
 
