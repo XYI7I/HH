@@ -7,9 +7,11 @@ import math
 def index(request):
     context = {}
     if request.method == 'POST':
-        a = request.POST.get('a')
-        b = request.POST.get('b')
-        c = request.POST.get('c')
+        a = int(request.POST.get('a'))
+        b = int(request.POST.get('b'))
+        c = int(request.POST.get('c'))
+    else:
+        a = b = c = 1
 
     discr = b ** 2 - 4 * a * c
 

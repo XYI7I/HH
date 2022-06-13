@@ -53,10 +53,12 @@
       <div class="col-md-7 col-lg-8 text-center" >
         <h2>a⋅x<sup>2</sup>+b⋅x+c=0</h2>
         <form class="needs-validation" novalidate="" method="post">
+          {% csrf_token %}
+          {{ form }}
           <div class="row g-3">
             <div class="col-sm-4">
               <label for="a" class="form-label">a</label>
-              <input type="number" class="form-control text-center" id="a" placeholder="" value="" required="">
+              <input type="number" class="form-control text-center" name="a" id="a" placeholder="" value="-" required="">
               <div class="invalid-feedback">
                 Valid number is required.
               </div>
@@ -64,7 +66,7 @@
 
             <div class="col-sm-4">
               <label for="b" class="form-label">b</label>
-              <input type="number" class="form-control text-center" id="b" placeholder="" value="" required="">
+              <input type="number" class="form-control text-center" name="b" id="b" placeholder="" value="-" required="">
               <div class="invalid-feedback">
                 Valid number is required.
               </div>
@@ -72,7 +74,7 @@
 
             <div class="col-sm-4">
               <label for="c" class="form-label">c</label>
-              <input type="number" class="form-control text-center" id="c" placeholder="" value="" required="">
+              <input type="number" class="form-control text-center" name="c" id="c" placeholder="" value="-" required="">
               <div class="invalid-feedback">
                 Valid number is required.
               </div>

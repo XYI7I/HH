@@ -1,0 +1,9 @@
+**/.vs/
+**/.idea/
+**/__pycache__/
+**/venv/
+/Add_courses/
+**/.vscode/
+**/bin/
+**/obj/
+*.csproj
